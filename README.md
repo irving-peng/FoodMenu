@@ -2,7 +2,7 @@
 ## Installation
 first go to terminal and write these command line
 ```
-git clone 
+git clone https://github.com/irving-peng/FoodMenu.git
 ```
 ```
 python3 main.py
