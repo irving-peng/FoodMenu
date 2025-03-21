@@ -37,24 +37,16 @@ class User:
   def __init__(self, row):
     self.userid = row[0]
     self.username = row[1]
-    self.age = row[2]
-    self.height = row[3]
-    self.currentweight = row[4]
-    self.goalweight = row[5]
-    self.weightgoal = row[6]
-    self.nutritiongoal = row[7]
-    self.period = row[8]
+    self.gender = row[2]
+    self.age = row[3]
+    self.height = row[4]
+    self.currentweight = row[5]
+    self.goalweight = row[6]
+    self.weightgoal = row[7]
+    self.nutritiongoal = row[8]
+    self.period = row[9]
 
 
-class Job:
-
-  def __init__(self, row):
-    self.jobid = row[0]
-    self.userid = row[1]
-    self.status = row[2]
-    self.originaldatafile = row[3]
-    self.datafilekey = row[4]
-    self.resultsfilekey = row[5]
 
 
 ###################################################################
@@ -141,6 +133,9 @@ def prompt():
     print("   0 => end")
     print("   1 => users")
     print("   2 => create user")
+    print("   3 => daily calories")
+    print("   4 => generate menu")
+    print("   5 => customize menu")
 
     cmd = input()
 
@@ -218,6 +213,7 @@ def users(baseurl):
     # for user in users:
     print(user.userid)
     print(" ","username:", user.username)
+    print(" ","gender:", user.gender)
     print(" ", "age:", str(user.age))
     print(" ", "height:", str(user.height))
     print(" ", "current weight:", str(user.currentweight))
@@ -233,9 +229,14 @@ def users(baseurl):
     logging.error("url: " + url)
     logging.error(e)
     return
-
+  
+############################################################
+#
+# add user
+#
 def add_user(baseurl):
     username = input("Enter your username: ")
+    gender = input("Enter your gender: ")
     age = int(input("Enter your age: "))
     height = int(input("Enter your height in inches: "))
     currentweight = int(input("Enter your current weight in lbs: "))
@@ -245,6 +246,7 @@ def add_user(baseurl):
     period = int(input("Enter your diet period in days: "))
 
     data = { "username": username, 
+            "gender": gender,
             "age": age, 
             "height": height, 
             "currentweight": currentweight, 
@@ -258,7 +260,6 @@ def add_user(baseurl):
     res = requests.post(url, json=data)
     body = res.json()
 
-    print(body)
 
     if res.status_code == 200: 
       #success
@@ -267,8 +268,106 @@ def add_user(baseurl):
       # failed:
       print("Failed with status code:", res.status_code)
 
+def cal(baseurl):
+    user_id = input("Please enter your user id: ")
+    api = "/cal/" + user_id
+    url = baseurl + api
+    res = requests.get(url)
+    body = res.json()
+    if res.status_code == 200:
+      # sucess
+      print("Goal type:", body["nutritiongoal"])
+      print("  Daily calorie:", body["cal_per_day"], "cals")
+      print("  Breakfast calorie:", body["breakfast_cal"], "cals")
+      print("  Lunch calorie:", body["lunch_cal"], "cals")
+      print("  Dinner calorie:", body["dinner_cal"], "cals")
+    else:
+      #failed
+      print("Failed with status code:", res.status_code)
 
+def menu(baseurl):
+    user_id = input("Please enter your user id: ")
+    api = "/cookbook/" + user_id
+    url = baseurl + api
+    res = requests.get(url)
+    body = res.json()
+    breakfast = body["breakfast"]
+    lunch = body["lunch"]
+    dinner = body["dinner"]
 
+    if res.status_code == 200:
+        # sucess
+        print("Menu!")
+        print("--------------------")
+        print("Breakfast")
+        print("  Carbs")
+        print(f"    {breakfast["carbohydrates"][0][0]}---{breakfast["carbohydrates"][0][1]} g")
+        print("  Protein")
+        print(f"    {breakfast["protein"][0][0]}---{breakfast["protein"][0][1]} g")
+        print("  Fat")
+        print(f"    {breakfast["fat"][0][0]}---{breakfast["fat"][0][1]} g")
+        print("--------------------")
+
+        print("Lunch")
+        carbs_food = lunch["carbohydrates"]
+        protein_food = lunch["protein"]
+        fat_food = lunch["fat"]
+        print("  Carbs")
+        for i in range(len(carbs_food)):
+            print(f"    {lunch["carbohydrates"][i][0]}---{lunch["carbohydrates"][i][1]} g")
+        print("  Protein")
+        for i in range(len(protein_food)):
+          print(f"    {lunch["protein"][i][0]}---{lunch["protein"][i][1]} g")
+        print("  Fat")
+        for i in range(len(fat_food)):
+          print(f"    {lunch["fat"][i][0]}---{lunch["fat"][i][1]} g")
+        print("--------------------")
+
+        print("Dinner")
+        carbs_food = dinner["carbohydrates"]
+        protein_food = dinner["protein"]
+        fat_food = dinner["fat"]
+        print("  Carbs")
+        for i in range(len(carbs_food)):
+            print(f"    {lunch["carbohydrates"][i][0]}---{lunch["carbohydrates"][i][1]} g")
+        print("  Protein")
+        for i in range(len(protein_food)):
+          print(f"    {lunch["protein"][i][0]}---{lunch["protein"][i][1]} g")
+        print("  Fat")
+        for i in range(len(fat_food)):
+          print(f"    {lunch["fat"][i][0]}---{lunch["fat"][i][1]} g")
+        print("--------------------")
+    else:
+        #failed
+        print("Failed with status code:", res.status_code)
+
+def customize_menu(baseurl):
+    user_id = int(input("Enter your userid: "))
+    type = input("Enter a category to customize(like/ dislike/ allergy): ")
+    food = input("Enter food name: ")
+    data = { 
+        "userid": user_id, 
+        "food": food,
+        "type": type
+    }
+    api = "/users/customize"
+    url = baseurl + api
+    res = requests.post(url, json=data)
+    body = res.json()
+
+    if res.status_code == 200:
+      print("You have sucessfully customize your daily menu!")
+    elif res.status_code == 500:
+        try:
+            body = res.json()
+            print("Error message:", body)
+        except ValueError:
+            print("Error message (raw):", res.text)
+    else:
+        #failed
+        print("Failed with status code:", res.status_code)
+
+  
 
 ############################################################
 # main
@@ -339,6 +438,12 @@ try:
       users(baseurl)
     elif cmd == 2:
       add_user(baseurl)
+    elif cmd == 3:
+      cal(baseurl)
+    elif cmd ==4:
+      menu(baseurl)
+    elif cmd ==5:
+      customize_menu(baseurl)    
     else:
       print("** Unknown command, try again...")
     #
