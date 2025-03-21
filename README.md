@@ -1,9 +1,10 @@
 # FoodMenu
 ## Installation
-first go to terminal and write these command line
+first, go to terminal and clone the repository
 ```
 git clone https://github.com/irving-peng/FoodMenu.git
 ```
+then, run the program with main.py
 ```
 python3 main.py
 ```
