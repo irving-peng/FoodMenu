@@ -135,7 +135,8 @@ def prompt():
     print("   2 => create user")
     print("   3 => daily calories")
     print("   4 => generate menu")
-    print("   5 => customize menu")
+    print("   5 => customize preference")
+    print("   6 => generate customize menu")
 
     cmd = input()
 
@@ -329,6 +330,47 @@ def menu(baseurl):
         fat_food = dinner["fat"]
         print("  Carbs")
         for i in range(len(carbs_food)):
+            print(f"    {dinner["carbohydrates"][i][0]}---{dinner["carbohydrates"][i][1]} g")
+        print("  Protein")
+        for i in range(len(protein_food)):
+          print(f"    {dinner["protein"][i][0]}---{dinner["protein"][i][1]} g")
+        print("  Fat")
+        for i in range(len(fat_food)):
+          print(f"    {dinner["fat"][i][0]}---{dinner["fat"][i][1]} g")
+        print("--------------------")
+    else:
+        #failed
+        print("Failed with status code:", res.status_code)
+
+def generate_customize_menu(baseurl):
+    user_id = input("Please enter your user id: ")
+    api = "/cookbook/customize/" + user_id
+    url = baseurl + api
+    res = requests.get(url)
+    body = res.json()
+    breakfast = body["breakfast"]
+    lunch = body["lunch"]
+    dinner = body["dinner"]
+
+    if res.status_code == 200:
+        # sucess
+        print("Menu!")
+        print("--------------------")
+        print("Breakfast")
+        print("  Carbs")
+        print(f"    {breakfast["carbohydrates"][0][0]}---{breakfast["carbohydrates"][0][1]} g")
+        print("  Protein")
+        print(f"    {breakfast["protein"][0][0]}---{breakfast["protein"][0][1]} g")
+        print("  Fat")
+        print(f"    {breakfast["fat"][0][0]}---{breakfast["fat"][0][1]} g")
+        print("--------------------")
+
+        print("Lunch")
+        carbs_food = lunch["carbohydrates"]
+        protein_food = lunch["protein"]
+        fat_food = lunch["fat"]
+        print("  Carbs")
+        for i in range(len(carbs_food)):
             print(f"    {lunch["carbohydrates"][i][0]}---{lunch["carbohydrates"][i][1]} g")
         print("  Protein")
         for i in range(len(protein_food)):
@@ -336,6 +378,21 @@ def menu(baseurl):
         print("  Fat")
         for i in range(len(fat_food)):
           print(f"    {lunch["fat"][i][0]}---{lunch["fat"][i][1]} g")
+        print("--------------------")
+
+        print("Dinner")
+        carbs_food = dinner["carbohydrates"]
+        protein_food = dinner["protein"]
+        fat_food = dinner["fat"]
+        print("  Carbs")
+        for i in range(len(carbs_food)):
+            print(f"    {dinner["carbohydrates"][i][0]}---{dinner["carbohydrates"][i][1]} g")
+        print("  Protein")
+        for i in range(len(protein_food)):
+          print(f"    {dinner["protein"][i][0]}---{dinner["protein"][i][1]} g")
+        print("  Fat")
+        for i in range(len(fat_food)):
+          print(f"    {dinner["fat"][i][0]}---{dinner["fat"][i][1]} g")
         print("--------------------")
     else:
         #failed
@@ -443,7 +500,9 @@ try:
     elif cmd ==4:
       menu(baseurl)
     elif cmd ==5:
-      customize_menu(baseurl)    
+      customize_menu(baseurl)  
+    elif cmd ==6:
+      generate_customize_menu(baseurl)
     else:
       print("** Unknown command, try again...")
     #
