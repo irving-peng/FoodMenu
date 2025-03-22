@@ -1,0 +1,13 @@
+userid,foodid,type
+80011,3,like
+80011,3,dislike
+80012,3,like
+80012,45,allergy
+80012,45,like
+80013,45,like
+80019,45,like
+80020,45,allergy
+80022,45,like
+80012,56,like
+80016,56,like
+80013,248,dislike

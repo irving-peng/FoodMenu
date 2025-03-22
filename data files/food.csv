@@ -1,0 +1,349 @@
+foodid,foodname,calories
+1,Cows' milk,0.676
+2,Milk skim,0.366
+3,Buttermilk,0.516
+4,"Evaporated, undiluted",1.369
+5,Fortified milk,0.968
+6,Powdered milk,5.0
+7,"skim, instant",3.412
+8,"skim, non-instant",3.412
+9,Goats' milk,0.676
+10,(1/2 cup ice cream),1.278
+11,Cocoa,0.933
+12,skim. milk,0.512
+13,(cornstarch),1.109
+14,Custard,1.149
+15,Ice cream,1.596
+16,Ice milk,1.447
+17,Cream or half-and-half,1.417
+18,or whipping,3.613
+19,Cheese,1.067
+20,uncreamed,0.867
+21,Cheddar,4.118
+22,"Cheddar, grated cup",4.036
+23,Cream cheese,3.75
+24,Processed cheese,3.75
+25,Roquefort type,3.75
+26,Swiss,3.75
+27,Eggs raw,1.5
+28,Eggs Scrambled or fried,1.719
+29,Yolks,3.529
+30,Butter,7.143
+31,Butter,1.009
+32,Butter,1.009
+33,Hydrogenated cooking fat,6.65
+34,Lard,9.018
+35,Margarine,7.196
+36,"Margarine, 2 pat or",7.143
+37,Mayonnaise,7.333
+38,Corn oil,8.929
+39,Olive oil,8.929
+40,Safflower seed oil,8.929
+41,French dressing,4.0
+42,Thousand Island sauce,5.0
+43,Salt pork,7.833
+44,Bacon,5.938
+45,Beef,2.882
+46,Hamburger,2.882
+47,Ground lean,2.176
+48,Roast beef,4.588
+49,Steak,3.882
+50,"Steak, lean, as round",2.588
+51,Corned beef,2.176
+52,Corned beef hash canned,1.412
+53,Corned beef hash Dried,2.054
+54,Pot-pie,2.115
+55,Corned beef hash Stew,0.787
+56,chicken,2.176
+57,"Fried, breast or leg and thigh chicken",2.882
+58,Roasted chicken,2.9
+59,"Chicken livers, fried",1.4
+60,"Duck, domestic",3.7
+61,"Lamb, chop, broiled",4.174
+62,Leg roasted,3.651
+63,"Shoulder, braised",3.353
+64,"Pork, chop, 1 thick",2.6
+65,Ham pan-broiled,3.412
+66,"Ham, as ",2.982
+67,"Ham, canned, spiced",2.895
+68,Pork roast,3.647
+69,Pork sausage,4.75
+70,Turkey,2.65
+71,Veal,2.176
+72,Roast,3.588
+73,Clams,1.024
+74,Cod,1.7
+75,Crab meat,1.059
+76,Fish sticks fried,1.786
+77,Flounder,2.0
+78,Haddock,1.588
+79,Halibut,1.82
+80,Herring,2.11
+81,Lobster,0.92
+82,Mackerel,1.824
+83,Oysters,1.004
+84,Oyster stew,1.471
+85,Salmon,1.412
+86,Sardines,2.118
+87,Scallops,1.04
+88,Shad,2.0
+89,Shrimp,1.294
+90,Swordfish,1.8
+91,Tuna,2.0
+92,Artichoke,0.44
+93,Asparagus,0.188
+94,Beans,0.2
+95,Lima,0.875
+96,"Lima, dry, cooked",1.354
+97,"Navy, baked with pork",1.25
+98,Red kidney,0.885
+99,Bean sprouts,0.34
+100,Beet greens,0.27
+101,Beetroots,0.006
+102,Broccoli,0.3
+103,Brussels sprouts,0.462
+104,Sauerkraut,0.213
+105,Steamed cabbage,0.235
+106,Carrots,0.3
+107,"Raw, grated",0.409
+108,"Strips, from raw",0.4
+109,Cauliflower,0.25
+110,Celery,0.2
+111,Stalk raw,0.125
+112,Chard steamed,0.2
+113,Collards,0.34
+114,Corn,0.92
+115,cooked or canned,0.85
+116,Cucumbers,0.12
+117,Dandelion greens,0.444
+118,Eggplant,0.167
+119,Endive,0.175
+120,Kale,0.409
+121,Kohlrabi,0.286
+122,"Lambs quarters, steamed",0.32
+123,Lentils,1.06
+124,Lettuce,0.14
+125,Iceberg,0.13
+126,Mushrooms canned,0.1
+127,Mustard greens,0.214
+128,Okra,0.32
+129,Onions,0.381
+130,"Raw, green",0.44
+131,Parsley,0.04
+132,Parsnips,0.613
+133,Peas,0.66
+134,"Fresh, steamed peas",0.7
+135,Frozen peas,0.0
+136,Split cooked peas,1.15
+137,heated peas,0.53
+138,Peppers canned,0.263
+139,"Peppers Raw, green, sweet",0.25
+140,Peppers with beef and crumbs,1.7
+141,"Potatoes, baked",1.0
+142,French-fried,2.583
+143,Potatoes Mashed with milk and butter,1.15
+144,"Potatoes, pan-tried",2.68
+145,Scalloped with cheese potatoes,1.45
+146,Steamed potatoes before peeling,0.8
+147,Potato chips,5.5
+148,Radishes,0.2
+149,Rutabagas,0.32
+150,Soybeans,1.3
+151,Spinach,0.26
+152,Squash,0.167
+153,"Winter, mashed",0.475
+154,Sweet potatoes,1.409
+155,Candied,1.343
+156,Tomatoes,0.208
+157,"Raw, 2 by 2 1/2",0.2
+158,Tomato juice,0.208
+159,Tomato catsup,0.882
+160,Turnip greens,0.31
+161,"Turnips, steamed",0.258
+162,"Watercress stems, raw",0.18
+163,Apple juice canned,0.5
+164,Apple vinegar,0.14
+165,"Apples, raw",0.538
+166,Stewed or canned,0.417
+167,Apricots,0.88
+168,"Dried, uncooked",2.933
+169,Fresh,0.482
+170,"Nectar, or juice",0.56
+171,Avocado,1.713
+172,Banana,0.567
+173,Blackberries,0.59
+174,Blueberries,0.98
+175,Cantaloupe,0.105
+176,Cherries,0.389
+177,"Fresh, raw",0.57
+178,Cranberry sauce sweetened,1.913
+179,Dates,2.837
+180,Figs,2.857
+181,"Fresh, raw figs",0.789
+182,figs Canned with syrup ,1.13
+183,"Fruit cocktail, canned",0.762
+184,Grapefruit sections,0.68
+185,"Grapefruit, fresh, 5"" diameter",0.175
+186,Grapefruit juice,0.4
+187,Grapes,0.458
+188,"European, as Muscat, Tokay",0.625
+189,Grape juice,0.64
+190,Lemon juice,0.24
+191,Lemonade concentratefrozen,1.955
+192,Limeade concentrate frozen,1.858
+193,Olives large,1.108
+194,OlivesRipe,1.615
+195,"Oranges 3"" diameter",0.333
+196,Orange juice,0.448
+197,Frozen ,1.571
+198,Papaya,0.375
+199,Peaches,0.778
+200,"Fresh, raw",0.307
+201,Pears,0.765
+202,"Raw, 3 by 2V",0.549
+203,Persimmons,0.6
+204,Pineapple,0.779
+205,Pineapple Crushed,0.788
+206,"Raw, diced",0.536
+207,Pineapple juice,0.48
+208,Plums,0.723
+209,"Raw, 2"" diameter",0.5
+210,Prunes,1.111
+211,Prune juice,0.708
+212,Raisins,2.614
+213,Raspberries,1.0
+214,"Raw, red",0.57
+215,Rhubarb sweetened,1.426
+216,Strawberries,1.066
+217,Raw,0.362
+218,Tangerines,0.351
+219,Watermelon,0.13
+220,Biscuits,3.421
+221,Bran flakes,4.68
+222,"Bread, cracked wheat",2.609
+223,Rye,2.391
+224,"White, 20 slices, or",2.698
+225,Whole-wheat,2.423
+226,Whole-wheat,2.391
+227,Corn bread ground meal,2.0
+228,Cornflakes,4.4
+229,Corn grits cooked,0.496
+230,Corn meal,3.051
+231,Crackers,3.929
+232,"Soda, 2 1/2 square",4.091
+233,Farina,0.441
+234,Flour,4.182
+235,Wheat (all purpose),3.636
+236,Wheat (whole),3.25
+237,Macaroni,1.107
+238,Baked with cheese,2.159
+239,Muffins,2.812
+240,Noodles,1.25
+241,Oatmeal,0.636
+242,"Pancakes 4"" diam.",2.315
+243,"Wheat, pancakes 4"" diam.",2.315
+244,"Pizza 14"" diam.",2.4
+245,Popcorn salted,5.429
+246,Puffed rice,3.929
+247,Puffed wheat presweetened,3.75
+248,Rice,3.596
+249,Converted,3.62
+250,White,3.623
+251,Rice flakes,3.833
+252,Rice polish,2.64
+253,Rolls,8.22
+254,of refined flour,3.026
+255,whole-wheat,2.55
+256,Spaghetti with meat sauce,1.14
+257,with tomatoes and cheese,0.84
+258,Spanish rice,0.868
+259,Shredded wheat biscuit,3.571
+260,Waffles,3.2
+261,Wheat germ,3.603
+262,Wheat-germ cereal toasted,4.0
+263,Wheat meal cereal unrefined,3.433
+264,"Wheat, cooked",1.375
+265,Bean soups,0.76
+266,Beef soup,0.4
+267,Bouillon,0.1
+268,chicken soup,0.3
+269,Clam chowder,0.333
+270,Cream soups,0.784
+271,Noodle,0.46
+272,Split-pea soup,0.588
+273,Tomato soup,0.714
+274,Vegetable,0.32
+275,Apple betty,1.5
+276,Bread pudding,1.87
+277,Cakes,2.75
+278,Chocolate fudge,3.5
+279,Cupcake,3.2
+280,Fruit cake,3.5
+281,Gingerbread,3.273
+282,"Plain, with no icing",3.273
+283,Sponge cake,2.875
+284,Candy,4.16
+285,Chocolate creams,4.333
+286,Fudge,4.111
+287,Hard candies,3.214
+288,Marshmallows,3.267
+289,Milk chocolate,5.179
+290,Chocolate syrup,2.0
+291,Doughnuts,4.091
+292,"Gelatin, made with water",0.649
+293,Honey,2.857
+294,Ice cream,0.833
+295,Ices,0.78
+296,preserves,2.75
+297,Jellies,2.5
+298,Molasses,2.25
+299,Cane Syrup,2.5
+300,"9"" diam. pie",2.444
+301,Cherry Pie,2.519
+302,Custard,2.038
+303,Lemon meringue,2.5
+304,Mince,2.519
+305,Pumpkin Pie,2.038
+306,Puddings Sugar,3.85
+307,3 teaspoons sugar,4.167
+308,"Brown, firm-packed, dark sugar",3.705
+309,Syrup,2.5
+310,table blends sugar,2.75
+311,Tapioca cream pudding,1.34
+312,Almonds,6.071
+313,roasted and salted,6.271
+314,Brazil nuts,6.529
+315,Cashews,5.6
+316,coconut sweetened,5.48
+317,Peanut butter,6.0
+318,"Peanut butter, natural",5.68
+319,Peanuts,5.8
+320,Pecans,6.596
+321,Sesame seeds,5.6
+322,Sunflower seeds,5.6
+323,Walnuts,6.5
+324,Beer,0.475
+325,Gin,2.5
+326,Wines,1.367
+327,Table (12.2% alcohol),0.833
+328,Carbonated drinks Artificially sweetened,0.0
+329,Club soda,0.0
+330,Cola drinks,0.396
+331,Fruit-flavored soda,0.465
+332,Ginger ale,0.303
+333,Root beer,0.405
+334,Coffee,0.013
+335,Tea,0.017
+336,"White rice, cooked",1.297
+337,"Brown rice, cooked",1.118
+338,"Quinoa, cooked",1.2
+339,White pasta,1.429
+340,Whole wheat pasta,1.243
+341,Instant noodles,4.471
+342,Udon noodles,0.955
+343,Rice noodles,1.097
+344,"Barley, cooked",1.229
+345,"Couscous, cooked",1.121
+346,"Bulgur, cooked",0.83
+347,"Farro, cooked",1.176
+348,"Oats, cooked",0.658
